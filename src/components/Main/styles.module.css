@@ -1,0 +1,7 @@
+.IntroductionContainer {
+    margin: 0 auto;
+    max-width: var(--global-max-width);
+    width: 80%;
+    text-align: left;
+    color: var( --light-gray-color );
+}

@@ -1,0 +1,57 @@
+.FeedContainer {
+    max-width: var(--global-max-width);
+    width: 80%;
+    margin: 40px auto;
+}
+
+.Title {
+    text-align: center;
+    color: var( --light-gray-color );
+}
+
+.FeedList {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.FeedList>li{
+    margin: 20px 0px;
+}
+
+.FeedList>li>div:hover {
+    cursor: pointer;
+    border: 4px var(--light-orange-color) solid;
+    margin: -3px;
+    box-shadow: 0px 0px 10px var(--orange-color)
+}
+
+.ModalHeader {
+    font-size: 24px;
+}
+
+:global .modal-content {
+    width: var( --global-max-width );
+}
+
+.TransactionContainer {
+    border-bottom: 1px var( --light-gray-color ) solid;
+    margin: 10px;
+}
+
+.TransactionContainer:last-child {
+    border-bottom: none;
+}
+
+.TransactionTitle {
+    font-size: 20px;
+}
+
+.TransactionListContainer {
+    list-style-type: none;
+}
+
+.Loader {
+    font-size: 28px;
+    margin: 40px;
+    color: var( --light-gray-color );
+}

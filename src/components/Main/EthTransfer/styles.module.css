@@ -1,0 +1,20 @@
+.ComponentContainer {
+    margin: 40px auto;
+    max-width: var(--global-max-width);
+    width: 80%;
+    text-align: center;
+    color: var( --light-gray-color );
+}
+
+.BtnText {
+    color: var( --dark-blue-color )
+}
+
+:global .input-group-text {
+    width: 70px
+}
+
+:global .form-control:focus {
+    border-color: var( --orange-color );
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(var(--orange-color-triplets), 0.5);
+}

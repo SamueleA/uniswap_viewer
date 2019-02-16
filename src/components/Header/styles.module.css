@@ -1,0 +1,9 @@
+.Title {
+    text-align: center;
+    margin: 20px 0px 40px 0px;
+    color: var( --light-gray-color );
+}
+
+.TitleOrange {
+    color: var( --light-orange-color );
+}
