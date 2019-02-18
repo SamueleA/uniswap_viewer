@@ -43,6 +43,8 @@ class Feed extends Component {
         }
 
         // add up amounts from txs
+        // The API is missing a way to get 'decimals' property of the ERC-20 tokens
+        // decimals will be assumed to 18 (like ether) for the sake of the exercise
         txs.forEach( tx =>{
             balance.ETH += Number(web3Utils.fromWei(tx.ethAmount));
             // add token symbol if does not exist
@@ -113,12 +115,14 @@ class Feed extends Component {
                             </Modal.Header>
                             <Modal.Body>
                                 {this.state.modalTransactions.map((tx, index)=>{
+                                    // The API is missing a way to get 'decimals' property of the ERC-20 tokens
+                                    // decimals will be assumed to 18 (like ether) for the sake of the exercise
                                     return (
                                         <div className={styles.TransactionContainer} key={tx.id}>
                                             <h3 className={styles.TransactionTitle}>{`Transaction #${index+1}`}</h3>
                                                 <ul className={styles.TransactionListContainer}>
-                                                    <li>{`ETH Amount: ${tx.ethAmount}`}</li>
-                                                    <li>{`${tx.tokenSymbol} Amount: ${tx.tokenAmount}`}</li>
+                                                    <li>{`ETH Amount: ${web3Utils.fromWei(tx.ethAmount, 'ether')}`}</li>
+                                                    <li>{`${tx.tokenSymbol} Amount: ${web3Utils.fromWei(tx.tokenAmount, 'ether')}`}</li>
                                                 </ul>
                                             </div>
                                     )
